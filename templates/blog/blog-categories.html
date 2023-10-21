@@ -1,0 +1,11 @@
+<aside class="single_sidebar_widget post_category_widget">
+    <h4 class="widget_title">Category</h4>
+    <ul class="list cat-list">
+        <li>
+          {% for category,count in Dict.items %}
+          <li><a href="{% url 'blog:category' cat=category %}">{{category}}:{{count}}</a></li>
+          {% endfor%}
+            </a>
+        </li>
+    </ul>
+</aside>

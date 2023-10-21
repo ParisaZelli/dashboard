@@ -1,0 +1,12 @@
+<aside class="single_sidebar_widget popular_post_widget">
+    <h3 class="widget_title">Recent Post</h3>
+    <div class="media post_item">
+        <div class="media-body">
+            {% for post in posts|slice:'0:3' %}
+            <a href="{% url 'blog:blog_details' num=post.id %}">
+                <h3>{{post.title}}</h3>
+            </a>
+            <p>{{post.updated_time}}</p>
+            {% endfor %}
+        </div>
+</aside>
